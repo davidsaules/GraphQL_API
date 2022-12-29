@@ -8,6 +8,15 @@ There were used various technologies to build the API
 - Laravel sail (PHP)
 - MySQL
 - GraphQL
+- Docker
+
+## Prerequisites
+
+It is neccesary to install Docker and keep the engine running because laravel sail uses docker compose
+
+```
+https://docs.docker.com/get-docker/
+```
 
 ## Execution
 
