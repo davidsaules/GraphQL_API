@@ -12,7 +12,7 @@ There were used various technologies to build the API
 
 ## Prerequisites
 
-It is neccesary to install Docker and keep the engine running because laravel sail uses docker compose. Also, it is important to let free ports 80 and 3306 for apache and mysql respectively.
+It is neccesary to install Docker and keep the engine running because laravel sail uses docker compose. Also, it is important to maintain ports 80 and 3306 available for apache and mysql respectively.
 
 
 ```
