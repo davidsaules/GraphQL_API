@@ -12,7 +12,8 @@ There were used various technologies to build the API
 
 ## Prerequisites
 
-It is neccesary to install Docker and keep the engine running because laravel sail uses docker compose
+It is neccesary to install Docker and keep the engine running because laravel sail uses docker compose. Also, it is important to let free ports 80 and 3306 for apache and mysql respectively.
+
 
 ```
 https://docs.docker.com/get-docker/
@@ -20,12 +21,30 @@ https://docs.docker.com/get-docker/
 
 ## Execution
 
-It is necessary to get inside the project folder and after that, execute the "sail" command to create a docker container with everything we need. 
+It is necessary to get inside the project folder.
 
 ```sh
 cd GraphQL_API
+```
+Then, remove all images and volumes
+
+```sh
+./vendor/bin/sail down --rmi all -v
+```
+
+Execute command to create a docker container with everything we need. 
+
+```sh
 ./vendor/bin/sail up -d
 ```
+
+And finally, create the database and seed it with the following commands
+
+```sh
+./vendor/bin/sail artisan migrate:fresh
+./vendor/bin/sail artisan db:seed
+```
+
 
 The GraphQL library provide an IDE to test the API in the following URL. 
 
